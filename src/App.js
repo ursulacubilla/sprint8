@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-import './App.css';
+import './app.css';
+import { Logo } from './images';
+import { NavBar } from './nav-bar';
 
 function App() {
   const [starships,setStarships] = useState([]);
@@ -19,16 +21,25 @@ function App() {
 
   return (
     <div className="App">
-      <h1>STAR WARS</h1>
+      <header className='App-header '>
+      <img src='https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png'></img>
+
+
+      <NavBar />
+
        {starships && starships.length > 0 && starships.map((starshipsObj, index) => (
-       <p>
-        <button onClick={() => console.log("Hola")}>{starshipsObj.name}
+         <ul key={index} >
+         <li className='App-header-li' >
+        <button className='App-button' onClick={() => console.log("Hola")}>{starshipsObj.name}
         <p>{starshipsObj.model}</p>
         </button>
-       </p> 
+        {/* <img src='https://starwars-visualguide.com/assets/img/starships/5.jpg' /> */}
+       </li> 
+         </ul>
        ))}
 
       
+       </header>
     </div>
   );
 

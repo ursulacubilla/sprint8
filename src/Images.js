@@ -1,6 +1,7 @@
+import logo from "./logo/Star-Wars-Logo-1.png";
 
-// export const Img = () => {
 
-// <img src='https://starwars-visualguide.com/#/starships/5' />
-// }
+export const Logo = () => {
+    <img src={logo} />
+}
 
