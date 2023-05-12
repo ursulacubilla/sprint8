@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  min-width: 100%;
 }
 .App {
   text-align: center;
@@ -9,13 +10,6 @@ body {
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: black;
   min-height: 100vh;
@@ -32,21 +26,29 @@ img {
   height: 100px;
   display: flex;
 }
+.img-welcome {
+  width: 300px;
+  height: 150px;
+}
+.hr {
+  color: antiquewhite;
+  min-width: 100%;
+}
 .App-navBar-div{
-  width: 100%;
+  min-width: 100%;
 }
 .App-navBar {
   display: inline;
 }
 .App-navBar a {
-  
   margin: 10px;
   font-size: smaller;
   color: antiquewhite;
   text-decoration: none;
 }
 .App-navBar-ul {
-  margin-left: 100px;
+  padding-right: 10px;
+  padding-left: 0;
 }
 ul {
   width: 200vh;
@@ -64,7 +66,31 @@ ul {
 p {
   display: flex;
 }
+h1 {
+  margin: 0;
+  padding-bottom: 200px;
+}
 
+.button-welcome {
+  width: 250px;
+  height: 50px;
+  margin-top: 25px;
+  text-align: center;
+  background-color: rgb(26, 25, 25);
+  color: antiquewhite;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px gray;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button-welcome:active {
+  transform: scale(0.98);
+}
+
+/* .nav-bar-welcome{
+  padding-bottom: 100px;
+} */
 /* .App-link {
   color: #61dafb;
 } */

@@ -5,3 +5,5 @@ export const Logo = () => {
     <img src={logo} />
 }
 
+
+// ver si el useParams() me sirve para conseguir el id de las imagenes que necetiso cargar en cada boton.... ????
