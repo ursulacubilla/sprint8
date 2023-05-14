@@ -5,6 +5,7 @@ export function NavBar() {
     <nav className="App-navBar-div">
         <hr className="hr" />
     <ul className="App-navBar-ul">
+    <li className="App-navBar"><Link to="welcome">WELCOME</Link></li>
     <li className="App-navBar"><Link to="/">HOME</Link></li>
     <li className="App-navBar"><Link to="/application">STARSHIPS</Link></li>
     </ul>

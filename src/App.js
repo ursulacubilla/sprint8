@@ -3,6 +3,7 @@ import { Application } from './application';
 import { Welcome } from './welcome';
 import './app.css';
 import { Route, Routes } from 'react-router-dom';
+import { NavBar } from './nav-bar';
 
 
 function App() {
@@ -11,11 +12,15 @@ function App() {
   return (
     <div className="App">
       <header className='App-header'>
+        <NavBar />
+        <Routes>
 
-        {efect === true && <Application isActive={efect === true} />}
+         <Route path='/welcome/' element={<Welcome /> } />        
+         <Route path='/application/' element={<Application /> } />        
+          </Routes>        
        
 
-        <Welcome />
+        
 
 
       </header>

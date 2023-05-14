@@ -11,9 +11,14 @@ export const Application = () => {
   const fetchData = () => {
     return axios.get('https://swapi.py4e.com/api/starships')
     .then((response) => {
-      // console.log(response);
-      setStarships(response.data.results)});
-  }
+      setStarships(response.data.results)
+      
+      // let image = response.data.results[2].url.replace('https://swapi.py4e.com/api/starships', 'https://starwars-visualguide.com/assets/img/starships');
+      // console.log("results[2]", response.data.results[2].url);
+      // console.log("Rem", image )
+      // console.log("substring", `${image.substring(0, image.length -1)}.jpg`)
+    });
+    }
   
   useEffect(() => {
     fetchData();
@@ -24,7 +29,7 @@ export const Application = () => {
       <header className='App-header '>
       <img src='https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png'></img>
 
-      <NavBar />
+      {/* <NavBar /> */}
 
        {starships && starships.length > 0 && starships.map((starshipsObj, index) => (
          <ul key={index} >
