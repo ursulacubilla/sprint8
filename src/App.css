@@ -1,14 +1,11 @@
+
+/* Global style */
 body {
   margin: 0;
   min-width: 100%;
 }
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 .App-header {
   background-color: black;
@@ -20,59 +17,49 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-img {
-  margin-top: 20px;
-  width: 250px;
-  height: 100px;
-  display: flex;
-}
-.img-welcome {
-  width: 300px;
-  height: 150px;
-  padding-bottom: 50px;
-}
 .hr {
   color: antiquewhite;
-  min-width: 100%;
-}
-.App-navBar-div{
-  min-width: 100%;
-}
-.App-navBar {
-  display: inline;
-}
-.App-navBar a {
-  margin: 10px;
-  font-size: smaller;
-  color: antiquewhite;
-  text-decoration: none;
-}
-.App-navBar-ul {
-  padding-right: 10px;
-  padding-left: 0;
+  /* min-width: 40%; */
 }
 ul {
-  width: 200vh;
-  margin: 5px;
-  list-style: none;
+  height: 20px;
+}
+p {
+  display: flex;
+}
+h1 {
+  padding-bottom: 100px;
 }
 
+
+/*  */
+.App-header-li {
+  list-style: none;
+}
 .App-button {
   width: 100vh;
   text-align: start;
   background-color: rgb(26, 25, 25);
   color: antiquewhite;
   border: none;
+  border-radius: 10px;
 }
-p {
+img {
+  margin-top: 20px;
+  width: 250px;
+  height: 100px;
   display: flex;
 }
-h1 {
-  /* margin: 0; */
-  padding-bottom: 100px;
+
+
+/* Welcome */
+.img-welcome {
+  width: 300px;
+  height: 150px;
+  padding-bottom: 50px;
 }
 .button-welcome {
-  width: 250px;
+width: 250px;
 height: 50px;
 margin-top: 25px;
 text-align: center;
@@ -90,6 +77,98 @@ cursor: pointer;
 .link-welcome {
   text-decoration: none;
   color: antiquewhite;
+}
+
+
+/* NavBar */
+.App-navBar-div{
+  min-width: 100%;
+}
+.App-navBar {
+  display: inline;
+}
+.App-navBar a {
+  margin: 10px;
+  font-size: smaller;
+  color: antiquewhite;
+  text-decoration: none;
+}
+.App-navBar-ul {
+  padding-right: 10px;
+  padding-left: 0;
+  width: 200vh;
+  margin: 5px;
+  list-style: none;
+}
+.App-navBar-login {
+  display: inline;
+  text-align: end;
+}
+.App-navBar-login a {
+  margin: 10px;
+  font-size: smaller;
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+
+/* Login */
+.input-login{
+  width: 50vh;
+  height: 30px;
+  text-align: start;
+  background-color: rgb(26, 25, 25);
+  color: antiquewhite;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.button-login {
+  width: 250px;
+  height: 30px;
+  margin-top: 25px;
+  text-align: center;
+  background-color: rgb(26, 25, 25);
+  color: antiquewhite;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px gray;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button-login:active {
+  transform: scale(0.98);
+}
+
+
+/* Register */
+.input-register {
+  width: 70vh;
+  height: 30px;
+  text-align: start;
+  background-color: rgb(26, 25, 25);
+  color: antiquewhite;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.button-register {
+  width: 300px;
+  height: 30px;
+  margin-top: 25px;
+  text-align: center;
+  background-color: rgb(26, 25, 25);
+  color: antiquewhite;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px gray;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.button-register:active {
+  transform: scale(0.98);
 }
 /* .nav-bar-welcome{
   padding-bottom: 100px;

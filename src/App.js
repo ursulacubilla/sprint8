@@ -5,6 +5,8 @@ import './app.css';
 import { Route, Routes } from 'react-router-dom';
 import { NavBar } from './nav-bar';
 import { Home } from './home';
+import { Login } from './login';
+import { Register } from './register';
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
          <Route path='/welcome/' element={<Welcome /> } />  
          <Route path='/home/' element={<Home /> } />  
          <Route path='/application/' element={<Application /> } />        
+         <Route path='/login/' element={<Login /> } />        
+         <Route path='/register/' element={<Register /> } />        
           </Routes>        
       
       </header>
