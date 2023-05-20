@@ -6,7 +6,7 @@ export function NavBar() {
         <hr className="hr" />
     <ul className="App-navBar-ul">
     <li className="App-navBar"><Link to="welcome">WELCOME</Link></li>
-    <li className="App-navBar"><Link to="/">HOME</Link></li>
+    <li className="App-navBar"><Link to="/home">HOME</Link></li>
     <li className="App-navBar"><Link to="/application">STARSHIPS</Link></li>
     </ul>
     <hr className="hr" />

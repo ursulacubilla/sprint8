@@ -4,7 +4,7 @@ export const ButtonPages = () => {
 
     return(
         <div>
-            <button onClick={() => console.log("ViewMore")}>
+            <button className="button-welcome" onClick={() => console.log("ViewMore")}>
                 View more
             </button>
         </div>

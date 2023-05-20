@@ -4,6 +4,7 @@ import { Welcome } from './welcome';
 import './app.css';
 import { Route, Routes } from 'react-router-dom';
 import { NavBar } from './nav-bar';
+import { Home } from './home';
 
 
 function App() {
@@ -15,14 +16,11 @@ function App() {
         <NavBar />
         <Routes>
 
-         <Route path='/welcome/' element={<Welcome /> } />        
+         <Route path='/welcome/' element={<Welcome /> } />  
+         <Route path='/home/' element={<Home /> } />  
          <Route path='/application/' element={<Application /> } />        
           </Routes>        
-       
-
-        
-
-
+      
       </header>
     </div>
   );

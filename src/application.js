@@ -12,11 +12,6 @@ export const Application = () => {
     return axios.get('https://swapi.py4e.com/api/starships')
     .then((response) => {
       setStarships(response.data.results)
-      
-      // let image = response.data.results[2].url.replace('https://swapi.py4e.com/api/starships', 'https://starwars-visualguide.com/assets/img/starships');
-      // console.log("results[2]", response.data.results[2].url);
-      // console.log("Rem", image )
-      // console.log("substring", `${image.substring(0, image.length -1)}.jpg`)
     });
     }
   

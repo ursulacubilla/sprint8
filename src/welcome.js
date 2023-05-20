@@ -1,5 +1,6 @@
 import React from "react";
-import { NavBar } from "./nav-bar";
+import { Link } from "react-router-dom";
+
 
 
 export const Welcome = () => {
@@ -10,7 +11,7 @@ export const Welcome = () => {
 
         <img className="img-welcome" src='https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png'></img>
 
-        <button className="button-welcome" onClick={() => console.log("Welcome")}>Ir a la pagina principal</button> {/* aqui el routing de react */}
+        <button className="button-welcome"> <Link to="/application/" className="link-welcome">Ir a la pagina principal</Link></button> {/* aqui el routing de react */}
         
         </>
     );
