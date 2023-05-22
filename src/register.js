@@ -1,13 +1,56 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 export const Register = () => {
+    const [user, setUser] = useState(0);
+    const [password, setPassword] = useState(0);
+
+useEffect(() => {
+  const localUser = localStorage.setItem('user', user);
+  const localPasword = localStorage.setItem('password', password);
+  console.log(localUser, localPasword);
+  setUser(localUser);
+  setPassword(localPasword)
+}, []);
+
+    function handleChangeUsuario(e) {
+        setUser(e.target.value);
+    }
+    function handleChangePassword(e) {
+        setPassword(e.target.value);
+        console.log(localStorage);
+    }
+    function handleChangeOnClick() {
+        // localStorage.setItem('user', e.target.value);
+        // localStorage.setItem('password', e.target.value);
+    }
+
     return(
         <>
-        <input className="input-register" defaultValue="First Name"></input>
-        <input className="input-register" defaultValue="Second Name"></input>
-        <input className="input-register" defaultValue="Surname"></input>
+        <input className="input-register" placeholder="Usuario"></input>
+        <input className="input-register" placeholder="Contraseña"></input>
+       
 
-        <button className="button-register">Submit</button>
+        <button className="button-register" onClick={handleChangeOnClick}>Submit</button>
         </>
     );
 }
+
+
+{/*defaultVale => placeholder 
+    inputs => usuario y contraseña /
+
+    cortar la logica del login (localstorage) y mudarla para la pagina de registro /
+
+    caso exitoso de registro (usuario valido y contraseña valido)
+    caso fallido de registro ()
+
+    el boton con onclick valida lo que se escribe en el input, aqui se guarda en el localstorage para comprobar la informacion y registrar al usuario
+
+    login caso exitoso (escribe contraseña y usuario valido), comprobar que los campos tienen informacion, recuperar los datos guardados en el localstorage, y comparar lo que el usuario esta escribiendo con lo que esta guardado ( usuario y/o contraseña valido = true)
+
+    caso fallido (escribe usuario y contraseña invalido)(usuario y/o contraseña invalido = false)
+
+    el boton con onclick valida los datos.!
+
+*/}
