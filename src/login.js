@@ -1,7 +1,16 @@
 import React from "react";
+import { useEffect } from "react";
 
 
-export const Login = () => {
+export const Login = ({user, password }) => {
+    
+    useEffect(() => {
+  const localUser = localStorage.getItem('user', user);
+  const localPasword = localStorage.getItem('password', password);
+  console.log(localUser, localPasword);
+//   setUser(localUser);
+//   setPassword(localPasword)
+}, []);
   
     return(
         <>

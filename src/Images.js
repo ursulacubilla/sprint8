@@ -1,8 +1,10 @@
-import logo from "./logo/Star-Wars-Logo-1.png";
+import { Route, useParams } from "react-router-dom"
 
 
-export const Logo = () => {
-    <img src={logo} />
+export const Images = () => {
+    const { starShipsId } = useParams();
+
+    // <Route path=":starShipsId" element={<Images />} />
 }
 
 

@@ -1,34 +1,28 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const Register = () => {
-    const [user, setUser] = useState(0);
+    const [user, setUser] = useState('');
     const [password, setPassword] = useState(0);
-
-useEffect(() => {
-  const localUser = localStorage.setItem('user', user);
-  const localPasword = localStorage.setItem('password', password);
-  console.log(localUser, localPasword);
-  setUser(localUser);
-  setPassword(localPasword)
-}, []);
 
     function handleChangeUsuario(e) {
         setUser(e.target.value);
+        console.log(e.target.value);
     }
     function handleChangePassword(e) {
         setPassword(e.target.value);
-        console.log(localStorage);
     }
     function handleChangeOnClick() {
-        // localStorage.setItem('user', e.target.value);
-        // localStorage.setItem('password', e.target.value);
+        localStorage.setItem('user', user);
+        localStorage.setItem('password', password);
+
+        // console.log(localStorage);
     }
 
     return(
         <>
-        <input className="input-register" placeholder="Usuario"></input>
-        <input className="input-register" placeholder="Contraseña"></input>
+        <input className="input-register" placeholder="Usuario" onChange={handleChangeUsuario}></input>
+        <input type="password" className="input-register" placeholder="Contraseña" onChange={handleChangePassword}></input>
        
 
         <button className="button-register" onClick={handleChangeOnClick}>Submit</button>

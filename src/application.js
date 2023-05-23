@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './app.css';
 import { ButtonPages } from './button-pages';
-import { NavBar } from './nav-bar';
+
 
 export const Application = () => {
   const [starships, setStarships] = useState([]);
@@ -24,7 +24,6 @@ export const Application = () => {
       <header className='App-header '>
       <img src='https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png'></img>
 
-      {/* <NavBar /> */}
 
        {starships && starships.length > 0 && starships.map((starshipsObj, index) => (
          <ul key={index} >
