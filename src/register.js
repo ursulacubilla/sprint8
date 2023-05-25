@@ -7,7 +7,6 @@ export const Register = () => {
 
     function handleChangeUsuario(e) {
         setUser(e.target.value);
-        console.log(e.target.value);
     }
     function handleChangePassword(e) {
         setPassword(e.target.value);
@@ -15,8 +14,6 @@ export const Register = () => {
     function handleChangeOnClick() {
         localStorage.setItem('user', user);
         localStorage.setItem('password', password);
-
-        // console.log(localStorage);
     }
 
     return(

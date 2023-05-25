@@ -18,11 +18,11 @@ function App() {
         <NavBar />
         <Routes>
 
-         <Route path='/welcome/' element={<Welcome /> } />  
-         <Route path='/home/' element={<Home /> } />  
-         <Route path='/application/' element={<Application /> } />        
-         <Route path='/login/' element={<Login /> } />        
-         <Route path='/register/' element={<Register /> } />        
+         <Route path='welcome' element={<Welcome /> } />  
+         <Route path='home' element={<Home /> } />  
+         <Route path='application' element={<Application /> } />        
+         <Route path='login' element={<Login /> } />        
+         <Route path='register' element={<Register /> } />        
           </Routes>        
       
       </header>

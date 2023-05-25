@@ -1,23 +1,32 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useState } from "react";
 
 
-export const Login = ({user, password }) => {
-    
-    useEffect(() => {
-  const localUser = localStorage.getItem('user', user);
-  const localPasword = localStorage.getItem('password', password);
-  console.log(localUser, localPasword);
-//   setUser(localUser);
-//   setPassword(localPasword)
-}, []);
+export const Login = ({ user, password }) => {
+    const [user1, setUser1] = useState('');
+    const [password1, setPassword1] = useState(0);
+
+    function handleChangeUsuario1(e) {
+        setUser1(e.target.value);
+    }
+    function handleChangePassword1(e) {
+        setPassword1(e.target.value);
+    }
+
   
-    return(
-        <>
-        <input className="input-login" placeholder="User"></input>
-        <input type="password" className="input-login" placeholder="Password"></input>
+    function handleChangeOnClickLogin() {
+        const localUser = localStorage.getItem('user', user);
+        const localPassword = localStorage.getItem('password', password);
+        
+        const result = user1 === localUser && password1 === localPassword ? "Password y contraseña valido" : "Passwor o contraseña invalido";
+        console.log("Resultado: ", result);
+    }
 
-        <button className="button-login">Submit</button>
+    return (
+        <>
+            <input className="input-login" placeholder="User" onChange={handleChangeUsuario1}></input>
+            <input type="password" className="input-login" placeholder="Password" onChange={handleChangePassword1}></input>
+
+            <button className="button-login" onClick={handleChangeOnClickLogin}>Submit</button>
         </>
     );
 }
