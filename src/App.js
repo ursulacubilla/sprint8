@@ -7,6 +7,7 @@ import { NavBar } from './nav-bar';
 import { Home } from './home';
 import { Login } from './login';
 import { Register } from './register';
+import { Starship } from './startship';
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
          <Route path='home' element={<Home /> } />  
          <Route path='application' element={<Application /> } />        
          <Route path='login' element={<Login /> } />        
-         <Route path='register' element={<Register /> } />        
+         <Route path='register' element={<Register /> } />
+         <Route path='starships/:starshipId' element={<Starship />} />       
           </Routes>        
       
       </header>

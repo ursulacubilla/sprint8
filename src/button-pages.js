@@ -1,10 +1,10 @@
 import React from "react";
 
-export const ButtonPages = () => {
+export const ButtonPages = (props) => {
 
     return(
         <div>
-            <button className="button-welcome" onClick={() => console.log("ViewMore")}>
+            <button className="button-welcome" onClick={props.onClick}>
                 View more
             </button>
         </div>

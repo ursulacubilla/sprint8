@@ -3,21 +3,42 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './app.css';
 import { ButtonPages } from './button-pages';
+import { Link } from 'react-router-dom';
 
 
 export const Application = () => {
   const [starships, setStarships] = useState([]);
+  const [next, setNext] = useState("");
 
   const fetchData = () => {
     return axios.get('https://swapi.py4e.com/api/starships')
     .then((response) => {
-      setStarships(response.data.results)
+      setNext(response.data.next);
+      const mapResult = response.data.results.map((item) => {
+        item.route = item.url.replace('https://swapi.py4e.com/api', '');
+        return item;
+      });
+      setStarships(mapResult);
     });
-    }
+  }
   
   useEffect(() => {
     fetchData();
   }, []);
+
+    function onClick() {
+      axios.get(next)
+      .then((response) => {
+        setNext(response.data.next);
+        const mapNext = response.data.results.map((item) => {
+          item.route = item.url.replace('https://swapi.py4e.com/api', '');
+          return item;
+        })
+        setStarships([...starships,
+          ...response.data.results,
+        ])
+      });
+    }
 
   return (
     <div className="App">
@@ -28,15 +49,15 @@ export const Application = () => {
        {starships && starships.length > 0 && starships.map((starshipsObj, index) => (
          <ul key={index} >
          <li className='App-header-li' >
-        <button className='App-button' onClick={() => console.log("Click")}>{starshipsObj.name}
+        <Link to={starshipsObj.route} className='App-link' onClick={() => console.log("Click", starships)}>{starshipsObj.name}
         <p>{starshipsObj.model}</p>
-        </button>
-        {starships === true && <img src='https://starwars-visualguide.com/assets/img/starships/5.jpg' isActive={starships === true}/>}
+        </Link>
        </li> 
          </ul>
        ))}
 
-        <ButtonPages />
+        { next !== null && <ButtonPages onClick={onClick} />}
+
        </header>
     </div>
   );

@@ -23,6 +23,7 @@ export const Login = ({ user, password }) => {
 
     return (
         <>
+        <img className="img-welcome" src='https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png'></img>
             <input className="input-login" placeholder="User" onChange={handleChangeUsuario1}></input>
             <input type="password" className="input-login" placeholder="Password" onChange={handleChangePassword1}></input>
 

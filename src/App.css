@@ -3,13 +3,14 @@
 body {
   margin: 0;
   min-width: 100%;
+  background-color: black;
 }
 .App {
   text-align: center;
 }
 .App-header {
   background-color: black;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +27,7 @@ ul {
 }
 p {
   display: flex;
+  margin: 0 0 0 10px;
 }
 h1 {
   padding-bottom: 100px;
@@ -35,14 +37,28 @@ h1 {
 /*  */
 .App-header-li {
   list-style: none;
-}
-.App-button {
   width: 100vh;
   text-align: start;
   background-color: rgb(26, 25, 25);
   color: antiquewhite;
   border: none;
   border-radius: 10px;
+  box-shadow: 2px 2px 2px gray;
+  text-decoration: none;
+  margin-left: 10px;
+  height: 60px;
+}
+.App-link {
+  text-align: start;
+  background-color: rgb(26, 25, 25);
+  color: antiquewhite;
+  border: none;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.App-header-li:active {
+  transform: scale(0.98);
 }
 img {
   margin-top: 20px;
@@ -169,6 +185,36 @@ cursor: pointer;
 }
 .button-register:active {
   transform: scale(0.98);
+}
+
+/* Starship */ 
+b {
+  color: azure;
+  font-weight: 50;
+}
+.p-Starship {
+  font-size: larger;
+  margin-top: 10px;
+  color: rgba(174, 170, 170, 0.922);
+}
+.img-Starship {
+  width: 70vh;
+  height: 30vh;
+  margin-bottom: 30px;
+  border-bottom: 1px solid blue;
+}
+.div-starship {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.div-starship-1 {
+  margin: 10px;
+  font-size: smaller;
+}
+.div-starship-2 {
+  margin: 10px;
+  font-size: smaller;
 }
 /* .nav-bar-welcome{
   padding-bottom: 100px;

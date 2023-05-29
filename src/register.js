@@ -18,6 +18,7 @@ export const Register = () => {
 
     return(
         <>
+        <img className="img-welcome" src='https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png'></img>
         <input className="input-register" placeholder="Usuario" onChange={handleChangeUsuario}></input>
         <input type="password" className="input-register" placeholder="Contraseña" onChange={handleChangePassword}></input>
        
@@ -27,21 +28,3 @@ export const Register = () => {
     );
 }
 
-
-{/*defaultVale => placeholder 
-    inputs => usuario y contraseña /
-
-    cortar la logica del login (localstorage) y mudarla para la pagina de registro /
-
-    caso exitoso de registro (usuario valido y contraseña valido)
-    caso fallido de registro ()
-
-    el boton con onclick valida lo que se escribe en el input, aqui se guarda en el localstorage para comprobar la informacion y registrar al usuario
-
-    login caso exitoso (escribe contraseña y usuario valido), comprobar que los campos tienen informacion, recuperar los datos guardados en el localstorage, y comparar lo que el usuario esta escribiendo con lo que esta guardado ( usuario y/o contraseña valido = true)
-
-    caso fallido (escribe usuario y contraseña invalido)(usuario y/o contraseña invalido = false)
-
-    el boton con onclick valida los datos.!
-
-*/}
