@@ -1,34 +1,33 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { Application } from './application';
+import { Welcome } from './welcome';
+import './app.css';
+import { Route, Routes } from 'react-router-dom';
+import { NavBar } from './nav-bar';
+import { Home } from './home';
+import { Login } from './login';
+import { Register } from './register';
+import { Starship } from './startship';
 
-import './App.css';
 
 function App() {
-  const [starships,setStarships] = useState([]);
-
-  const fetchData = () => {
-    return axios.get('https://swapi.py4e.com/api/starships')
-    .then((response) => {
-      console.log(response);
-      setStarships(response.data.results)});
-  }
-  
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const [efect, setEfect] = useState();
 
   return (
     <div className="App">
-      <h1>STAR WARS</h1>
-       {starships && starships.length > 0 && starships.map((starshipsObj, index) => (
-       <p>
-        <button onClick={() => console.log("Hola")}>{starshipsObj.name}
-        <p>{starshipsObj.model}</p>
-        </button>
-       </p> 
-       ))}
+      <header className='App-header'>
+        <NavBar />
+        <Routes>
 
+         <Route path='welcome' element={<Welcome /> } />  
+         <Route path='home' element={<Home /> } />  
+         <Route path='application' element={<Application /> } />        
+         <Route path='login' element={<Login /> } />        
+         <Route path='register' element={<Register /> } />
+         <Route path='starships/:starshipId' element={<Starship />} />       
+          </Routes>        
       
+      </header>
     </div>
   );
 
